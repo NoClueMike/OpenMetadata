@@ -21,7 +21,8 @@ import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, process.cwd(), '');
+  // TODO: narrowed env loading to the "VITE_" prefix for client safety — rename any client-needed variables to use this prefix so they are still loaded.
+  const env = loadEnv(mode, process.cwd(), 'VITE_');
   const devServerTarget =
     env.VITE_DEV_SERVER_TARGET ||
     env.DEV_SERVER_TARGET ||
