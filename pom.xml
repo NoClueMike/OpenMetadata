@@ -159,6 +159,7 @@
     <commonmark.version>0.26.0</commonmark.version>
     <flexmark.version>0.64.8</flexmark.version>
     <owasp-html-sanitizer.version>20260101.1</owasp-html-sanitizer.version>
+    <io-netty.netty-resolver-dns.version>4.1.135.Final</io-netty.netty-resolver-dns.version>
   </properties>
 
   <dependencyManagement>
@@ -752,6 +753,11 @@
         <groupId>org.bouncycastle</groupId>
         <artifactId>bcutil-jdk18on</artifactId>
         <version>1.84</version>
+      </dependency>
+      <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-resolver-dns</artifactId>
+        <version>${io-netty.netty-resolver-dns.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
