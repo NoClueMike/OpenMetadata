@@ -54,8 +54,10 @@ runs:
 
     - name: Pull Docker images
       shell: bash
+      env:
+        COMPOSE_FILE: ${{ inputs.compose_file }}
       run: |
-        docker compose -f ${{ inputs.compose_file }} pull
+        docker compose -f $COMPOSE_FILE pull
 
     - name: Start services
       shell: bash
